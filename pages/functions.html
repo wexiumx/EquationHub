@@ -8,7 +8,21 @@
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/function.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <script src="../js/function.js"></script>
+
+  <style>
+    .card-left {
+      height: 470px;
+      
+    }
+
+    .card {
+      max-height: 470px;
+      width: 500px;
+    }
+    
+    
+    
+  </style>
 </head>
 <body class="functions-page">
 
@@ -53,41 +67,140 @@
   </nav>
 </header>
 
-<!-- PLACEHOLDER CONTENT -->
 <section class="features-section">
   <h1>Functions</h1>
-  <p style="margin-top: 24px; font-size: 18px; color: var(--muted); line-height: 1.8;">
+  <p>
     Functions in math show how one value depends on another. They take an input, perform a rule, and give an output. Understanding functions helps you see patterns, solve problems, and work with equations effectively.
   </p>
 
-  <!-- CARDS PLACEHOLDER -->
-  <div class="container-function" style="margin-top: 60px; justify-content: center; gap: 32px; flex-wrap: wrap;">
-    <div class="leftside">
-      <div class="funcion-buttons">
-        <button class="function-btn" onclick="showFunction('linear')">Linear Function</button>
-        <button class="function-btn" onclick="showFunction('inverse')">Inversely proportional Function</button>
-        <button class="function-btn" onclick="showFunction('power')">Power Function</button>
-        <button class="function-btn" onclick="showFunction('root')">Root Function</button>
-        <button class="function-btn" onclick="showFunction('exponential')">Exponential Function</button>
-        <button class="function-btn" onclick="showFunction('logarithmic')">Logarithmic Function</button>
-        <button class="function-btn" onclick="showFunction('trigonometric')">Trigonometric Function</button>
-        
+  <div class="functions-layout ">
+    <aside class="functions-sidebar card-left">
+      <h3>Choose function</h3>
+      <div class="func-select">
+        <button data-mode="linear" class="active">Linear</button>
+        <button data-mode="quadratic">Quadratic</button>
+        <button data-mode="inverse">Inversely proportional</button>
+        <button data-mode="power">Power</button>
+        <button data-mode="root">Root</button>
+        <button data-mode="exp">Exponential</button>
+        <button data-mode="log">Logarithmic</button>
+        <button data-mode="trig">Trigonometric</button>
       </div>
+      <p></p>
+    </aside>
+
+    <main class="functions-main">
+      <h1>Formula</h1>
       <div class="formula">
-        <h2 class="function-title">Function Title</h2>
-        <p class="function-formula">Function Formula</p>
+        <div class="formula-display">y = 1·x + 0</div>
       </div>
-      <div class="description">
-        <p class="function-description">Function Description</p>
-      </div>
-    </div>
-    <div class="rightside">
-      <div class="graph">
+
+      <div class="properties">
+        <!-- Linear -->
+        <div class="param-group" data-mode="linear">
+          <label>k: <span class="param-value">1</span>
+            <input class="param" data-mode="linear" type="range" name="k" min="-5" max="5" step="0.1" value="1">
+          </label>
+          <label>b: <span class="param-value">0</span>
+            <input class="param" data-mode="linear" type="range" name="b" min="-10" max="10" step="0.1" value="0">
+          </label>
+        </div>
+
+        <!-- Quadratic -->
+        <div class="param-group" data-mode="quadratic" style="display:none;">
+          <label>a: <span class="param-value">1</span>
+            <input class="param" data-mode="quadratic" type="range" name="a" min="-3" max="3" step="0.05" value="1">
+          </label>
+          <label>b: <span class="param-value">0</span>
+            <input class="param" data-mode="quadratic" type="range" name="b" min="-5" max="5" step="0.1" value="0">
+          </label>
+          <label>c: <span class="param-value">0</span>
+            <input class="param" data-mode="quadratic" type="range" name="c" min="-10" max="10" step="0.1" value="0">
+          </label>
+        </div>
+
+        <!-- Inverse -->
+        <div class="param-group" data-mode="inverse" style="display:none;">
+          <label>k: <span class="param-value">1</span>
+            <input class="param" data-mode="inverse" type="range" name="k" min="-10" max="10" step="0.1" value="1">
+          </label>
+        </div>
+
+        <!-- Power -->
+        <div class="param-group" data-mode="power" style="display:none;">
+          <label>a: <span class="param-value">1</span>
+            <input class="param" data-mode="power" type="range" name="a" min="-5" max="5" step="0.1" value="1">
+          </label>
+          <label>b (exp): <span class="param-value">2</span>
+            <input class="param" data-mode="power" type="range" name="b" min="-5" max="5" step="0.1" value="2">
+          </label>
+        </div>
+
+        <!-- Root -->
+        <div class="param-group" data-mode="root" style="display:none;">
+          <label>a: <span class="param-value">1</span>
+            <input class="param" data-mode="root" type="range" name="a" min="-5" max="5" step="0.1" value="1">
+          </label>
+          <label>n (root): <span class="param-value">2</span>
+            <input class="param" data-mode="root" type="range" name="n" min="1" max="6" step="0.1" value="2">
+          </label>
+        </div>
+
+        <!-- Exponential -->
+        <div class="param-group" data-mode="exp" style="display:none;">
+          <label>a: <span class="param-value">1</span>
+            <input class="param" data-mode="exp" type="range" name="a" min="-5" max="5" step="0.1" value="1">
+          </label>
+          <label>base: <span class="param-value">2</span>
+            <input class="param" data-mode="exp" type="range" name="base" min="0.1" max="5" step="0.01" value="2">
+          </label>
+        </div>
+
+        <!-- Logarithmic -->
+        <div class="param-group" data-mode="log" style="display:none;">
+          <label>a: <span class="param-value">1</span>
+            <input class="param" data-mode="log" type="range" name="a" min="-5" max="5" step="0.1" value="1">
+          </label>
+          <label>base: <span class="param-value">2</span>
+            <input class="param" data-mode="log" type="range" name="base" min="0.1" max="10" step="0.01" value="2">
+          </label>
+          <label>c: <span class="param-value">0</span>
+            <input class="param" data-mode="log" type="range" name="c" min="-10" max="10" step="0.1" value="0">
+          </label>
+        </div>
+
+        <!-- Trigonometric -->
+        <div class="param-group" data-mode="trig" style="display:none;">
+          <label>fn:
+            <select class="param-trig-fn">
+              <option value="sin">sin</option>
+              <option value="cos">cos</option>
+              <option value="tan">tan</option>
+            </select>
+          </label>
+          <label>A: <span class="param-value">1</span>
+            <input class="param" data-mode="trig" type="range" name="A" min="-5" max="5" step="0.1" value="1">
+          </label>
+          <label>B: <span class="param-value">1</span>
+            <input class="param" data-mode="trig" type="range" name="B" min="-5" max="5" step="0.05" value="1">
+          </label>
+          <label>C: <span class="param-value">0</span>
+            <input class="param" data-mode="trig" type="range" name="C" min="-10" max="10" step="0.1" value="0">
+          </label>
+        </div>
 
       </div>
-    </div>
+    </main>
+
+    <aside class="functions-graph">
+      <div class="graph-card card">
+        <canvas id="func-canvas"></canvas>
+      </div>
+    </aside>
   </div>
-</section>
+ </section>
+
+ <script src="../js/functions.js"></script>
 
 <footer style="margin-top: 80px;">
   © 2026 Equation Hub · NorthShift & Wexiumx
