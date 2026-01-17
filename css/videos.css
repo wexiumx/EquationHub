@@ -11,6 +11,11 @@
   border-radius: 16px;
   padding: 24px;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1 1 480px; /* let videos grow but remain balanced */
+  max-width: 640px;
 }
 
 .video-card:hover {
@@ -37,7 +42,7 @@
   border: 1px solid var(--border);
 }
 
-/* Videos page layout moved from inline HTML styles */
+/* Videos page layout moved from inline HTML styles and duplicates removed */
 .videos-page .features-section {
   padding: 120px 24px 80px;
   text-align: center;
@@ -45,21 +50,7 @@
   margin: auto;
 }
 
-.videos-page .cards {
-  margin-top: 60px;
-  justify-content: center;
-  gap: 32px;
-  flex-wrap: wrap;
-}
-
-.video-card iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  height: auto;
-  border-radius: 12px;
-}
-
-/* Make video cards align with other cards and be responsive */
+/* Consolidated cards layout (removed duplicate blocks) */
 .videos-page .cards {
   margin-top: 60px;
   justify-content: center;
@@ -68,7 +59,13 @@
   align-items: stretch; /* keep cards same height */
 }
 
+/* Single consolidated video-card definition (merged previous duplicates) */
 .video-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -76,8 +73,14 @@
   max-width: 640px;
 }
 
-/* Ensure iframe fills available space inside the card */
-.video-card .video-embed {
+.video-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,255,255,0.3);
+}
+
+/* Ensure iframe fills available space inside the card and consistent styling */
+.video-card .video-embed,
+.video-card iframe {
   width: 100%;
   aspect-ratio: 16 / 9;
   height: auto;
