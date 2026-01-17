@@ -6,9 +6,11 @@
   <title>Functions / Videos — Equation Hub</title>
 
   <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/function.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="../js/function.js"></script>
 </head>
-<body>
+<body class="functions-page">
 
 <video autoplay muted loop playsinline id="bg-video">
   <source src="../Videos/background.mp4" type="video/mp4">
@@ -52,25 +54,37 @@
 </header>
 
 <!-- PLACEHOLDER CONTENT -->
-<section class="features-section" style="padding: 120px 24px 80px; text-align: center; max-width: 900px; margin: auto;">
-  <h1>Page Title Here</h1>
+<section class="features-section">
+  <h1>Functions</h1>
   <p style="margin-top: 24px; font-size: 18px; color: var(--muted); line-height: 1.8;">
-    do your best luke
+    Functions in math show how one value depends on another. They take an input, perform a rule, and give an output. Understanding functions helps you see patterns, solve problems, and work with equations effectively.
   </p>
 
   <!-- CARDS PLACEHOLDER -->
-  <div class="cards" style="margin-top: 60px; justify-content: center; gap: 32px; flex-wrap: wrap;">
-    <div class="card">
-      <h3>Card Title 1</h3>
-      <p>Placeholder description for card 1.</p>
+  <div class="container-function" style="margin-top: 60px; justify-content: center; gap: 32px; flex-wrap: wrap;">
+    <div class="leftside">
+      <div class="funcion-buttons">
+        <button class="function-btn" onclick="showFunction('linear')">Linear Function</button>
+        <button class="function-btn" onclick="showFunction('inverse')">Inversely proportional Function</button>
+        <button class="function-btn" onclick="showFunction('power')">Power Function</button>
+        <button class="function-btn" onclick="showFunction('root')">Root Function</button>
+        <button class="function-btn" onclick="showFunction('exponential')">Exponential Function</button>
+        <button class="function-btn" onclick="showFunction('logarithmic')">Logarithmic Function</button>
+        <button class="function-btn" onclick="showFunction('trigonometric')">Trigonometric Function</button>
+        
+      </div>
+      <div class="formula">
+        <h2 class="function-title">Function Title</h2>
+        <p class="function-formula">Function Formula</p>
+      </div>
+      <div class="description">
+        <p class="function-description">Function Description</p>
+      </div>
     </div>
-    <div class="card">
-      <h3>Card Title 2</h3>
-      <p>Placeholder description for card 2.</p>
-    </div>
-    <div class="card">
-      <h3>Card Title 3</h3>
-      <p>Placeholder description for card 3.</p>
+    <div class="rightside">
+      <div class="graph">
+
+      </div>
     </div>
   </div>
 </section>
