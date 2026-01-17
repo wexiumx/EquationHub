@@ -36,3 +36,51 @@
   border-radius: 12px;
   border: 1px solid var(--border);
 }
+
+/* Videos page layout moved from inline HTML styles */
+.videos-page .features-section {
+  padding: 120px 24px 80px;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.videos-page .cards {
+  margin-top: 60px;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.video-card iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Make video cards align with other cards and be responsive */
+.videos-page .cards {
+  margin-top: 60px;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  align-items: stretch; /* keep cards same height */
+}
+
+.video-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1 1 480px; /* let videos grow but remain balanced */
+  max-width: 640px;
+}
+
+/* Ensure iframe fills available space inside the card */
+.video-card .video-embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+  border-radius: 12px;
+}

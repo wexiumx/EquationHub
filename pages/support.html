@@ -6,26 +6,12 @@
   <title data-i18n="support_title">Support — Equation Hub</title>
 
   <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/support.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
-  <style>
-    /* Hard-lock the hero text block so translations can't push it sideways */
-    .support-hero-wrapper {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-      padding: 0 24px;
-    }
-
-    .support-hero-wrapper p {
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-      max-width: 100%;
-    }
-  </style>
+ 
 </head>
 
-<body>
+<body class="support-page">
 
 <video autoplay muted loop playsinline id="bg-video">
   <source src="../Videos/background.mp4" type="video/mp4">
@@ -72,7 +58,7 @@
       Your contribution helps us build bigger, better, and more interactive projects to make learning even more engaging and fun.
     </p>
 
-    <div style="margin-top: 42px; display: inline-block; transform: scale(1.8); transform-origin: center;">
+    <div class="kofi-widget">
       <script src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script>
       <script>
         kofiwidget2.init('Support Us', '#ff3d3d', 'T6T01S81A1');
