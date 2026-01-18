@@ -216,5 +216,10 @@
 <!-- Language dropdown: manages language switching and page translation -->
 <script src="../js/tranclate_bar.js"></script>
 
+<script>
+const currentLang = localStorage.getItem("lang") || "en";
+fetch(`http://localhost:4567/track?event=page_view&page=functions&lang=${currentLang}`);
+</script>
+
 </body>
 </html>

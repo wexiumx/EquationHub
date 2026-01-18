@@ -1,27 +1,30 @@
 // Language switcher with translation system and localStorage persistence
 
 document.addEventListener("DOMContentLoaded", () => {
-  // DOM Elements
+  // Find all the HTML elements we need to control
   const dropdown = document.querySelector(".lang-dropdown");
   const langBtn = document.querySelector(".lang-btn");
   const langBtnImg = document.querySelector(".lang-btn img");
   const langBtnLabel = document.querySelector(".lang-btn .lang-label");
   const langOptions = document.querySelectorAll(".lang-menu button");
 
-  // Detect subfolder to adjust image paths
+  // Check if we're in a subfolder (like /pages/) to fix image paths
   const isInSubfolder = window.location.pathname.includes('/pages/');
   const imagePath = isInSubfolder ? "../images/" : "images/";
 
-  // Language configs
+  // List all languages with their flag image and name
   const langMap = {
     en: { img: imagePath + "uk.png", label: "English" },
     lt: { img: imagePath + "lt.png", label: "Lietuvių" },
     ru: { img: imagePath + "ru.png", label: "Русский" }
   };
 
-  // Translate page by language code
+  // Function: Change the page text to a different language
   function translatePage(lang) {
-    // Translate elements with data-i18n attribute
+    // Send a message to the server that the user changed language
+    fetch("http://localhost:4567/track?event=lang_change&lang=" + lang);
+
+    // Find all elements marked with data-i18n and change their text
     document.querySelectorAll("[data-i18n]").forEach(el => {
       const key = el.dataset.i18n;
       const translated = translations[lang]?.[key];
@@ -40,24 +43,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Set language and update UI
+  // Function: Update the button display and save the language choice
   function setLanguage(lang) {
     langBtnImg.src = langMap[lang].img;
     langBtnLabel.textContent = langMap[lang].label;
-    localStorage.setItem("lang", lang);
+    localStorage.setItem("lang", lang); // Remember the choice for next time
     translatePage(lang);
   }
 
-  // Toggle dropdown
+  // Toggle the dropdown menu when button is clicked
   langBtn.addEventListener("click", e => {
-    e.stopPropagation();
+    e.stopPropagation(); // Don't trigger the document click below
     dropdown.classList.toggle("open");
   });
 
-  // Close dropdown on outside click
+  // Close dropdown if user clicks anywhere else on the page
   document.addEventListener("click", () => dropdown.classList.remove("open"));
 
-  // Language selection
+  // Handle language selection when a language button is clicked
   langOptions.forEach(btn => {
     btn.addEventListener("click", () => {
       setLanguage(btn.dataset.lang);
@@ -65,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Initialize with saved language
+  // Load saved language (or use English as default)
   const savedLang = localStorage.getItem("lang") || "en";
   setLanguage(savedLang);
 });
