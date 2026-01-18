@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Page Metadata -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title data-i18n="about_title">About Us — Equation Hub</title>
 
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/about.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -12,17 +14,22 @@
 
 <body class="about-page">
 
+<!-- Background Video -->
 <video autoplay muted loop playsinline id="bg-video">
   <source src="../Videos/background.mp4" type="video/mp4">
 </video>
 
+<!-- Header / Navigation -->
 <header>
   <nav>
+    <!-- Logo -->
     <div class="logo">
       <img src="../images/logo.png" alt="Equation Hub Logo" />
     </div>
 
+    <!-- Navigation Links & Language Selector -->
     <div class="nav-links-wrapper">
+      <!-- Main Navigation Links -->
       <div class="nav-links">
         <a href="../index.html" data-i18n="nav_home">Home</a>
         <a href="functions.html" data-i18n="nav_functions">Functions</a>
@@ -31,6 +38,7 @@
         <a href="support.html" class="support" data-i18n="nav_support">👑 Support</a>
       </div>
 
+      <!-- Language Dropdown Selector -->
       <div class="lang-dropdown">
         <button class="lang-btn">
           <img src="../images/uk.png">
@@ -48,15 +56,20 @@
   </nav>
 </header>
 
+<!-- Main Content Section -->
 <section class="features-section">
+  <!-- Page Title -->
   <h1><span data-i18n="about_title">About Us</span></h1>
 
+  <!-- About Description -->
   <p data-i18n="about_text" style="margin-top: 24px; font-size: 18px; color: var(--muted); line-height: 1.8;">
     Equation Hub was created by NorthShift and Wexiumx to help students learn math, physics, and other technical subjects in a clearer, more engaging way...
   </p>
 
+  <!-- Information Cards -->
   <div class="cards" style="margin-top: 60px; justify-content: center; gap: 32px; flex-wrap: wrap;">
 
+    <!-- Card 1: Made by Students -->
     <div class="card">
       <h3 data-i18n="about_card1_title">👨‍💻 Made by Students</h3>
       <p data-i18n="about_card1_desc">
@@ -64,6 +77,7 @@
       </p>
     </div>
 
+    <!-- Card 2: Focused on Learning -->
     <div class="card">
       <h3 data-i18n="about_card2_title">📚 Focused on Learning</h3>
       <p data-i18n="about_card2_desc">
@@ -71,6 +85,7 @@
       </p>
     </div>
 
+    <!-- Card 3: Interactive & Precise -->
     <div class="card">
       <h3 data-i18n="about_card3_title">⚡ Interactive & Precise</h3>
       <p data-i18n="about_card3_desc">
@@ -81,11 +96,15 @@
   </div>
 </section>
 
+<!-- Footer -->
 <footer data-i18n="footer_text" style="margin-top: 80px;">
   © 2026 Equation Hub · NorthShift & Wexiumx
 </footer>
 
+<!-- Scripts -->
+<!-- Translation system: handles multi-language support -->
 <script src="../js/translations.js"></script>
+<!-- Language dropdown: manages language switching and page translation -->
 <script src="../js/tranclate_bar.js"></script>
 
 </body>

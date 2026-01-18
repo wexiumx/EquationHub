@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Page Metadata -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Functions / Videos — Equation Hub</title>
+  <title>Functions — Equation Hub</title>
 
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/function.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body class="functions-page">
 
+<!-- Background Video -->
 <video autoplay muted loop playsinline id="bg-video">
   <source src="../Videos/background.mp4" type="video/mp4">
 </video>
 
+<!-- Header / Navigation -->
 <header>
   <nav>
+    <!-- Logo -->
     <div class="logo">
       <img src="../images/logo.png" alt="Equation Hub Logo" />
     </div>
 
+    <!-- Navigation Links & Language Selector -->
     <div class="nav-links-wrapper">
+      <!-- Main Navigation Links -->
       <div class="nav-links">
-        <a href="../index.html">Home</a>
-        <a href="functions.html" class="active">Functions</a>
-        <a href="videos.html">Videos</a>
-        <a href="about.html">About Us</a>
-        <a href="support.html" class="support">👑 Support</a>
+        <a href="../index.html" data-i18n="nav_home">Home</a>
+        <a href="functions.html" class="active" data-i18n="nav_functions">Functions</a>
+        <a href="videos.html" data-i18n="nav_videos">Videos</a>
+        <a href="about.html" data-i18n="nav_about">About Us</a>
+        <a href="support.html" class="support" data-i18n="nav_support">👑 Support</a>
       </div>
 
+      <!-- Language Dropdown Selector -->
       <div class="lang-dropdown">
         <button class="lang-btn" aria-label="Language">
           <img src="../images/uk.png" alt="English">
@@ -52,36 +60,45 @@
   </nav>
 </header>
 
+<!-- Main Content Section -->
 <section class="features-section">
-  <h1>Functions</h1>
-  <p>
+  <!-- Page Title & Description -->
+  <h1 data-i18n="functions_title">Functions</h1>
+  <p data-i18n="functions_desc">
     Functions in math show how one value depends on another. They take an input, perform a rule, and give an output. Understanding functions helps you see patterns, solve problems, and work with equations effectively.
   </p>
 
-  <div class="functions-layout ">
+  <!-- Interactive Functions Layout -->
+  <!-- Three-column layout: Sidebar (function selection) | Main (controls) | Graph (canvas) -->
+  <div class="functions-layout">
+    
+    <!-- LEFT SIDEBAR: Function Type Selection -->
     <aside class="functions-sidebar card-left">
-      <h3>Choose function</h3>
+      <h3 data-i18n="functions_choose">Choose function</h3>
       <div class="func-select">
-        <button data-mode="linear" class="active">Linear</button>
-        <button data-mode="quadratic">Quadratic</button>
-        <button data-mode="inverse">Inversely proportional</button>
-        <button data-mode="power">Power</button>
-        <button data-mode="root">Root</button>
-        <button data-mode="exp">Exponential</button>
-        <button data-mode="log">Logarithmic</button>
-        <button data-mode="trig">Trigonometric</button>
+        <button data-mode="linear" class="active" data-i18n="func_linear">Linear</button>
+        <button data-mode="quadratic" data-i18n="func_quadratic">Quadratic</button>
+        <button data-mode="inverse" data-i18n="func_inverse">Inversely proportional</button>
+        <button data-mode="power" data-i18n="func_power">Power</button>
+        <button data-mode="root" data-i18n="func_root">Root</button>
+        <button data-mode="exp" data-i18n="func_exp">Exponential</button>
+        <button data-mode="log" data-i18n="func_log">Logarithmic</button>
+        <button data-mode="trig" data-i18n="func_trig">Trigonometric</button>
       </div>
       <p></p>
     </aside>
 
+    <!-- CENTER: Formula Display & Parameter Controls -->
     <main class="functions-main">
-      <h1>Formula</h1>
+      <h1 data-i18n="functions_formula">Formula</h1>
+      <!-- Dynamic formula display that updates with parameter changes -->
       <div class="formula">
         <div class="formula-display">y = 1·x + 0</div>
       </div>
 
+      <!-- Parameter Control Groups (one set per function type) -->
       <div class="properties">
-        <!-- Linear -->
+        <!-- Linear: y = k·x + b -->
         <div class="param-group" data-mode="linear">
           <label>k: <span class="param-value">1</span>
             <input class="param" data-mode="linear" type="range" name="k" min="-5" max="5" step="0.1" value="1">
@@ -91,7 +108,7 @@
           </label>
         </div>
 
-        <!-- Quadratic -->
+        <!-- Quadratic: y = a·x² + b·x + c -->
         <div class="param-group" data-mode="quadratic" style="display:none;">
           <label>a: <span class="param-value">1</span>
             <input class="param" data-mode="quadratic" type="range" name="a" min="-3" max="3" step="0.05" value="1">
@@ -104,14 +121,14 @@
           </label>
         </div>
 
-        <!-- Inverse -->
+        <!-- Inverse: y = k/x -->
         <div class="param-group" data-mode="inverse" style="display:none;">
           <label>k: <span class="param-value">1</span>
             <input class="param" data-mode="inverse" type="range" name="k" min="-10" max="10" step="0.1" value="1">
           </label>
         </div>
 
-        <!-- Power -->
+        <!-- Power: y = a·x^b -->
         <div class="param-group" data-mode="power" style="display:none;">
           <label>a: <span class="param-value">1</span>
             <input class="param" data-mode="power" type="range" name="a" min="-5" max="5" step="0.1" value="1">
@@ -121,7 +138,7 @@
           </label>
         </div>
 
-        <!-- Root -->
+        <!-- Root: y = a·ⁿ√x -->
         <div class="param-group" data-mode="root" style="display:none;">
           <label>a: <span class="param-value">1</span>
             <input class="param" data-mode="root" type="range" name="a" min="-5" max="5" step="0.1" value="1">
@@ -131,7 +148,7 @@
           </label>
         </div>
 
-        <!-- Exponential -->
+        <!-- Exponential: y = a·base^x -->
         <div class="param-group" data-mode="exp" style="display:none;">
           <label>a: <span class="param-value">1</span>
             <input class="param" data-mode="exp" type="range" name="a" min="-5" max="5" step="0.1" value="1">
@@ -141,7 +158,7 @@
           </label>
         </div>
 
-        <!-- Logarithmic -->
+        <!-- Logarithmic: y = a·log(x) + c -->
         <div class="param-group" data-mode="log" style="display:none;">
           <label>a: <span class="param-value">1</span>
             <input class="param" data-mode="log" type="range" name="a" min="-5" max="5" step="0.1" value="1">
@@ -154,7 +171,7 @@
           </label>
         </div>
 
-        <!-- Trigonometric -->
+        <!-- Trigonometric: y = A·sin(B·x) + C -->
         <div class="param-group" data-mode="trig" style="display:none;">
           <label>fn:
             <select class="param-trig-fn">
@@ -173,23 +190,31 @@
             <input class="param" data-mode="trig" type="range" name="C" min="-10" max="10" step="0.1" value="0">
           </label>
         </div>
-
       </div>
     </main>
 
+    <!-- RIGHT SIDEBAR: Graph Canvas -->
     <aside class="functions-graph">
       <div class="graph-card card">
+        <!-- Canvas for rendering function graphs -->
         <canvas id="func-canvas"></canvas>
       </div>
     </aside>
   </div>
- </section>
+</section>
 
- <script src="../js/functions.js"></script>
-
-<footer style="margin-top: 80px;">
+<!-- Footer -->
+<footer style="margin-top: 80px;" data-i18n="footer_text">
   © 2026 Equation Hub · NorthShift & Wexiumx
 </footer>
+
+<!-- Scripts -->
+<!-- Function visualization: handles graph rendering and parameter updates -->
+<script src="../js/functions.js"></script>
+<!-- Translation system: handles multi-language support -->
+<script src="../js/translations.js"></script>
+<!-- Language dropdown: manages language switching and page translation -->
+<script src="../js/tranclate_bar.js"></script>
 
 </body>
 </html>

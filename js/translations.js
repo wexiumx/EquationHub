@@ -1,4 +1,21 @@
 const translations = {
+  videos: {
+    en: [
+      "https://www.youtube.com/embed/lGfsp2CWjok",
+      "https://www.youtube.com/embed/1xATmTI-YY8",
+      "https://www.youtube.com/embed/Vw-RwPBWS8g"
+    ],
+    lt: [
+      "https://www.youtube.com/embed/m1u8aY7zn2E",
+      "https://www.youtube.com/embed/kOnJ5Ui2LsU",
+      "https://www.youtube.com/embed/oQr7KgUe3T4"
+    ],
+    ru: [
+      "https://www.youtube.com/embed/4v-Th9NpPzY",
+      "https://www.youtube.com/embed/6YjsFYcPusc",
+      "https://www.youtube.com/embed/RbLHqXBObNc"
+    ]
+  },
   en: {
     // NAV
     nav_home: "Home",
@@ -62,7 +79,25 @@ const translations = {
       "Visualizations are built with accuracy and clarity in mind, ensuring a premium learning experience.",
 
     // FOOTER
-    footer_text: "© 2026 Equation Hub · NorthShift & Wexiumx"
+    footer_text: "© 2026 Equation Hub · NorthShift & Wexiumx",
+
+    // FUNCTIONS PAGE
+    functions_title: "Functions",
+    functions_desc: "Functions in math show how one value depends on another. They take an input, perform a rule, and give an output. Understanding functions helps you see patterns, solve problems, and work with equations effectively.",
+    functions_choose: "Choose function",
+    functions_formula: "Formula",
+    func_linear: "Linear",
+    func_quadratic: "Quadratic",
+    func_inverse: "Inversely proportional",
+    func_power: "Power",
+    func_root: "Root",
+    func_exp: "Exponential",
+    func_log: "Logarithmic",
+    func_trig: "Trigonometric",
+
+    // VIDEOS PAGE
+    videos_title: "Videos about functions",
+    videos_desc: "Watch our videos to understand mathematical functions easily. They help you learn, remember, and apply different types of functions with clear examples."
   },
 
   lt: {
@@ -128,7 +163,25 @@ const translations = {
       "Vizualizacijos sukurtos atsižvelgiant į tikslumą ir aiškumą, užtikrinant aukštos kokybės mokymosi patirtį.",
 
     // FOOTER
-    footer_text: "© 2026 Equation Hub · NorthShift & Wexiumx"
+    footer_text: "© 2026 Equation Hub · NorthShift & Wexiumx",
+
+    // FUNCTIONS PAGE
+    functions_title: "Funkcijos",
+    functions_desc: "Funkcijos matematikoje parodo, kaip viena reikšmė priklauso nuo kitos. Jos priima įvestį, atlieka taisyklę ir pateikia rezultatą. Funkcijų supratimas padeda matyti šablonus, spręsti problemas ir efektyviai dirbti su lygtimis.",
+    functions_choose: "Pasirinkite funkciją",
+    functions_formula: "Formulė",
+    func_linear: "Tiesinė",
+    func_quadratic: "Kvadratinė",
+    func_inverse: "Atvirkščiai proporcinė",
+    func_power: "Laipsnio",
+    func_root: "Šaknies",
+    func_exp: "Eksponentinė",
+    func_log: "Logaritminė",
+    func_trig: "Trigonometrinė",
+
+    // VIDEOS PAGE
+    videos_title: "Vaizdo įrašai apie funkcijas",
+    videos_desc: "Žiūrėkite mūsų vaizdo įrašus, kad lengvai suprastumėte matematines funkcijas. Jie padeda jums mokytis, prisiminti ir taikyti skirtingas funkcijų rūšis su aiškiais pavyzdžiais."
   },
 
   ru: {
@@ -198,6 +251,24 @@ const translations = {
       "Визуализации созданы с упором на точность и ясность.",
 
     // FOOTER
-    footer_text: "© 2026 Equation Hub · NorthShift & Wexiumx"
+    footer_text: "© 2026 Equation Hub · NorthShift & Wexiumx",
+
+    // FUNCTIONS PAGE
+    functions_title: "Функции",
+    functions_desc: "Функции в математике показывают, как одно значение зависит от другого. Они берут вход, применяют правило и выдают выход. Понимание функций помогает видеть закономерности, решать задачи и эффективно работать с уравнениями.",
+    functions_choose: "Выберите функцию",
+    functions_formula: "Формула",
+    func_linear: "Линейная",
+    func_quadratic: "Квадратичная",
+    func_inverse: "Обратно пропорциональная",
+    func_power: "Степенная",
+    func_root: "Корневая",
+    func_exp: "Экспоненциальная",
+    func_log: "Логарифмическая",
+    func_trig: "Тригонометрическая",
+
+    // VIDEOS PAGE
+    videos_title: "Видео о функциях",
+    videos_desc: "Смотрите наши видео, чтобы легко понять математические функции. Они помогают вам учиться, запоминать и применять различные типы функций с ясными примерами."
   }
 };

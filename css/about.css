@@ -1,4 +1,9 @@
-/* About page custom styling */
+/**
+ * About Page Stylesheet
+ * Styling for the About Us page with centered content and card layout
+ */
+
+/* === PAGE CONTAINER === */
 .about-page .features-section {
 	padding: 120px 24px 80px;
 	text-align: center;
@@ -6,6 +11,7 @@
 	margin: auto;
 }
 
+/* === CARDS GRID === */
 .about-page .cards {
 	margin-top: 60px;
 	justify-content: center;

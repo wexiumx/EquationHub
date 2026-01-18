@@ -1,5 +1,7 @@
+// Interactive function grapher - 8 function types with canvas rendering
+
 (function(){
-  // Smooth interactive plotting for functions page with many function types
+  // State: current and target parameters for animation
   const state = {
     mode: 'linear',
     // For each mode store current (displayed) and target (desired) parameter values
@@ -14,7 +16,7 @@
     animating: false
   };
 
-  // DOM
+  // DOM references
   const modeButtons = document.querySelectorAll('.func-select button');
   const formulaEl = document.querySelector('.formula-display');
   const sliders = document.querySelectorAll('.param');
@@ -22,6 +24,7 @@
   const canvas = document.getElementById('func-canvas');
   const ctx = canvas.getContext('2d');
 
+  // Switch function mode
   function setMode(mode){
     state.mode = mode;
     document.body.classList.remove('mode-linear','mode-quadratic','mode-inverse','mode-power','mode-root','mode-exp','mode-log','mode-trig');
@@ -33,14 +36,17 @@
     draw();
   }
 
+  // Round to 2 decimals
   function round(v){ return (Math.round(v*100)/100).toString(); }
 
+  // Get parameter value
   function getParam(mode, name){
     const m = state[mode];
     if(!m) return 0;
     return (m.current && (name in m.current)) ? m.current[name] : (m.target && m.target[name]) || 0;
   }
 
+  // Set target and animate
   function setTarget(mode, name, val){
     const m = state[mode];
     if(!m) return;
@@ -51,6 +57,7 @@
     startAnimationLoop();
   }
 
+  // Update formula display
   function updateFormula(){
     const mode = state.mode;
     if(mode === 'linear'){
@@ -80,6 +87,7 @@
     }
   }
 
+  // Handle slider input
   function onSlider(e){
     const input = e.target;
     const mode = input.dataset.mode;
@@ -90,7 +98,7 @@
     const lbl = input.parentElement.querySelector('.param-value');
     if(lbl) lbl.textContent = val;
   }
-
+  // Handle trig function selection
   function onTrigFnChange(e){
     const fn = e.target.value;
     setTarget('trig', 'fn', fn);
@@ -98,6 +106,7 @@
     draw();
   }
 
+  // Fit canvas with high-DPI support
   function fitCanvas(){
     const r = window.devicePixelRatio || 1;
     const rect = canvas.getBoundingClientRect();
@@ -106,6 +115,7 @@
     ctx.setTransform(r,0,0,r,0,0);
   }
 
+  // Evaluate function at x
   function evalFunc(x){
     const mode = state.mode;
     // helper to fetch current params
@@ -139,6 +149,7 @@
     return NaN;
   }
 
+  // Draw graph
   function draw(){
     if(!ctx) return;
     fitCanvas();
@@ -165,10 +176,11 @@
     const yPad = (yMax - yMin)*0.12;
     yMin -= yPad; yMax += yPad;
 
+    // Coordinate converters
     function sx(x){ return pad + ((x - xMin)/(xMax-xMin))*plotW; }
     function sy(y){ return pad + plotH - ((y - yMin)/(yMax-yMin))*plotH; }
 
-    // grid
+    // Grid
     ctx.strokeStyle = 'rgba(255,255,255,0.06)'; ctx.lineWidth = 1;
     for(let gx=Math.ceil(xMin); gx<=Math.floor(xMax); gx++){
       const xpx = sx(gx);
@@ -180,12 +192,12 @@
       ctx.beginPath(); ctx.moveTo(pad, ypx); ctx.lineTo(pad+plotW, ypx); ctx.stroke();
     }
 
-    // axes
+    // Axes
     ctx.strokeStyle = 'rgba(255,255,255,0.18)'; ctx.lineWidth = 1.5;
     if(xMin<=0 && xMax>=0){ const x0 = sx(0); ctx.beginPath(); ctx.moveTo(x0,pad); ctx.lineTo(x0,pad+plotH); ctx.stroke(); }
     if(yMin<=0 && yMax>=0){ const y0 = sy(0); ctx.beginPath(); ctx.moveTo(pad,y0); ctx.lineTo(pad+plotW,y0); ctx.stroke(); }
 
-    // function
+    // Function curve
     ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 2.5; ctx.beginPath();
     let started=false;
     for(let i=0;i<ys.length;i++){
@@ -196,13 +208,13 @@
     }
     ctx.stroke();
 
-    // labels
+    // Labels
     ctx.fillStyle = 'rgba(255,255,255,0.85)'; ctx.font = '12px Inter, sans-serif';
     ctx.fillText('x', pad + plotW - 10, pad + plotH + 18);
     ctx.fillText('y', pad - 18, pad + 10);
   }
 
-  // Smooth animation loop: interpolate current -> target
+  // Smooth animation loop
   let rafId = null;
   function startAnimationLoop(){
     if(state.animating) return;
@@ -218,7 +230,7 @@
           const t = m.target[k];
           const cur = m.current[k];
           if(typeof t === 'number'){
-            // lerp numeric
+            // Smooth interpolation
             const next = cur + (t - cur) * 0.16;
             if(Math.abs(next - cur) > 1e-4){
               m.current[k] = next; changed = true;
@@ -244,7 +256,7 @@
     rafId = requestAnimationFrame(step);
   }
 
-  // init bindings
+  // Initialize
   function init(){
     if(!formulaEl || !canvas) return;
     modeButtons.forEach(b => b.addEventListener('click', () => setMode(b.dataset.mode)) );

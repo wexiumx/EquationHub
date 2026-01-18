@@ -1,4 +1,11 @@
-/* Functions page custom styling */
+/**
+ * Functions Page Stylesheet
+ * Interactive function visualization page with sidebar, formula display, and graph
+ * Features: Dynamic parameter controls, live graphing, function type selection
+ * Layout: Three-column grid (sidebar | main | graph)
+ */
+
+/* === PAGE CONTAINER === */
 .functions-page .features-section {
     padding: 80px 24px 60px;
     text-align: center;
@@ -13,6 +20,8 @@
     line-height: 1.8;
 }
 
+/* === MAIN LAYOUT === */
+/* Three-column responsive grid: Sidebar | Main Controls | Graph */
 .functions-layout {
     display: grid;
     grid-template-areas: "sidebar graph main";
@@ -24,12 +33,12 @@
     align-content: start;
 }
 
-/* Sidebar (single definition; previous duplicates removed) */
+/* === SIDEBAR - FUNCTION SELECTION === */
 .functions-sidebar {
     grid-area: sidebar;
     padding: 20px;
     position: sticky;
-    top: 20px; /* reduced sticky offset (kept same numeric intent) */
+    top: 20px;
     height: 300px;
     display: flex;
     flex-direction: column;
@@ -49,11 +58,7 @@
   border-color: rgba(255,255,255,0.6);
 }
 
-.functions-sidebar p {
-    margin-top: 16px;
-    color: var(--muted);
-}
-
+/* === FUNCTION TYPE BUTTONS === */
 .func-select {
     display: flex;
     flex-direction: column;

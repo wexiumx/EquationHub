@@ -1,4 +1,11 @@
-/* === GLOBAL THEME === */
+/**
+ * Equation Hub - Main Stylesheet
+ * Global styling for the entire website
+ * Includes: Theme variables, navbar, hero section, cards, footer, and responsive design
+ * Color Scheme: Dark theme with white text and subtle borders
+ */
+
+/* === GLOBAL THEME & VARIABLES === */
 :root {
   --bg: #000000;
   --panel: #0b0b0b;
@@ -8,6 +15,7 @@
   --support: #facc15;
 }
 
+/* === RESET & BASE STYLES === */
 * {
   margin: 0;
   padding: 0;
@@ -28,7 +36,7 @@ body {
   flex-direction: column;
 }
 
-/* === NAVBAR === */
+/* === NAVBAR / HEADER === */
 header {
   position: sticky;
   top: 0;

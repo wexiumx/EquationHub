@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Page Metadata -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title data-i18n="support_title">Support — Equation Hub</title>
 
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/support.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -13,17 +15,22 @@
 
 <body class="support-page">
 
+<!-- Background Video -->
 <video autoplay muted loop playsinline id="bg-video">
   <source src="../Videos/background.mp4" type="video/mp4">
 </video>
 
+<!-- Header / Navigation -->
 <header>
   <nav>
+    <!-- Logo -->
     <div class="logo">
       <img src="../images/logo.png" alt="Equation Hub Logo" />
     </div>
 
+    <!-- Navigation Links & Language Selector -->
     <div class="nav-links-wrapper">
+      <!-- Main Navigation Links -->
       <div class="nav-links">
         <a href="../index.html" data-i18n="nav_home">Home</a>
         <a href="functions.html" data-i18n="nav_functions">Functions</a>
@@ -32,6 +39,7 @@
         <a href="support.html" class="active support" data-i18n="nav_support">👑 Support</a>
       </div>
 
+      <!-- Language Dropdown Selector -->
       <div class="lang-dropdown">
         <button class="lang-btn" aria-label="Language">
           <img src="../images/uk.png" alt="English">
@@ -49,15 +57,18 @@
   </nav>
 </header>
 
+<!-- Hero Section: Support Call-to-Action -->
 <section class="hero" style="padding: 120px 24px 60px;">
   <div class="support-hero-wrapper">
     <h1><span data-i18n="support_title">Support Us</span></h1>
 
+    <!-- Support Description -->
     <p data-i18n="support_text" style="margin-top: 24px; font-size: 18px; color: var(--muted); line-height: 1.8;">
       If you enjoy our work or it has helped you, consider supporting us with a donation.
       Your contribution helps us build bigger, better, and more interactive projects to make learning even more engaging and fun.
     </p>
 
+    <!-- Ko-fi Donation Widget -->
     <div class="kofi-widget">
       <script src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script>
       <script>
@@ -68,11 +79,14 @@
   </div>
 </section>
 
+<!-- Developers Section -->
 <section class="features-section" style="padding: 80px 24px; max-width: 1200px; margin: auto; text-align: center;">
   <h2 class="section-title" data-i18n="support_developers">Developers</h2>
 
+  <!-- Developer Cards -->
   <div class="cards" style="justify-content: center; gap: 48px; flex-wrap: wrap;">
 
+    <!-- Developer 1: NorthShift (Emil) -->
     <div class="card" style="flex: 1 1 350px; max-width: 350px; min-height: 520px; padding: 24px;">
       <img src="../images/NorthShift.jpg" alt="NorthShift" style="width: 100%; border-radius: 16px; margin-bottom: 16px;">
       <h3 data-i18n="dev_northshift_name">NorthShift (Emil)</h3>
@@ -80,6 +94,7 @@
         Thank you for using our website, check out more projects on my GitHub.
       </p>
 
+      <!-- Social Links -->
       <div style="margin-top: 24px; display: flex; justify-content: center; gap: 16px;">
         <a href="https://github.com/NorthShift" target="_blank" class="btn">
           <img src="../images/github-mark-white.png" style="width:18px;"> GitHub
@@ -90,6 +105,7 @@
       </div>
     </div>
 
+    <!-- Developer 2: Wexiumx (Lukas) -->
     <div class="card" style="flex: 1 1 350px; max-width: 350px; min-height: 520px; padding: 24px;">
       <img src="../images/lukas.webp" alt="Wexiumx" style="width: 100%; border-radius: 16px; margin-bottom: 16px;">
       <h3 data-i18n="dev_wexiumx_name">Wexiumx (Lukas)</h3>
@@ -97,6 +113,7 @@
         Thank you for visiting, and feel free to share this with a friend.
       </p>
 
+      <!-- Social Links -->
       <div style="margin-top: 24px; display: flex; justify-content: center; gap: 16px;">
         <a href="https://github.com/wexiumx" target="_blank" class="btn">
           <img src="../images/github-mark-white.png" style="width:18px;"> GitHub
@@ -110,11 +127,15 @@
   </div>
 </section>
 
+<!-- Footer -->
 <footer data-i18n="footer_text" style="margin-top: 80px;">
   © 2026 Equation Hub · NorthShift & Wexiumx
 </footer>
 
+<!-- Scripts -->
+<!-- Translation system: handles multi-language support -->
 <script src="../js/translations.js"></script>
+<!-- Language dropdown: manages language switching and page translation -->
 <script src="../js/tranclate_bar.js"></script>
 
 </body>

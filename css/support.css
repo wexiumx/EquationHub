@@ -1,4 +1,9 @@
-/* Support page custom styling */
+/**
+ * Support Page Stylesheet
+ * Styling for the Support Us page with Ko-fi donation widget
+ */
+
+/* === HERO SECTION === */
 .support-hero-wrapper {
 	max-width: 800px;
 	margin: 0 auto;
@@ -12,6 +17,8 @@
 	max-width: 100%;
 }
 
+/* === KO-FI DONATION WIDGET === */
+/* Scales up the Ko-fi widget for better visibility */
 .kofi-widget {
 	margin-top: 42px;
 	display: inline-block;

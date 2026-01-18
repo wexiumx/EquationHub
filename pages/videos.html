@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Page Metadata -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Videos — Equation Hub</title>
 
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/videos.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body class="videos-page">
 
+<!-- Background Video -->
 <video autoplay muted loop playsinline id="bg-video">
   <source src="../Videos/background.mp4" type="video/mp4">
 </video>
 
+<!-- Header / Navigation -->
 <header>
   <nav>
+    <!-- Logo -->
     <div class="logo">
       <img src="../images/logo.png" alt="Equation Hub Logo" />
     </div>
 
+    <!-- Navigation Links & Language Selector -->
     <div class="nav-links-wrapper">
+      <!-- Main Navigation Links -->
       <div class="nav-links">
-        <a href="../index.html">Home</a>
-        <a href="functions.html">Functions</a>
-        <a href="videos.html" class="active">Videos</a>
-        <a href="about.html">About Us</a>
-        <a href="support.html" class="support">👑 Support</a>
+        <a href="../index.html" data-i18n="nav_home">Home</a>
+        <a href="functions.html" data-i18n="nav_functions">Functions</a>
+        <a href="videos.html" class="active" data-i18n="nav_videos">Videos</a>
+        <a href="about.html" data-i18n="nav_about">About Us</a>
+        <a href="support.html" class="support" data-i18n="nav_support">👑 Support</a>
       </div>
 
+      <!-- Language Dropdown Selector -->
       <div class="lang-dropdown">
         <button class="lang-btn" aria-label="Language">
           <img src="../images/uk.png" alt="English">
@@ -52,30 +60,44 @@
   </nav>
 </header>
 
-<!-- PLACEHOLDER CONTENT -->
+<!-- Main Content Section -->
 <section class="features-section">
-  <h1>Videos about functions</h1>
-  <p style="margin-top: 24px; font-size: 18px; color: var(--muted); line-height: 1.8;">
+  <!-- Page Title & Description -->
+  <h1 data-i18n="videos_title">Videos about functions</h1>
+  <p style="margin-top: 24px; font-size: 18px; color: var(--muted); line-height: 1.8;" data-i18n="videos_desc">
     Watch our videos to understand mathematical functions easily. They help you learn, remember, and apply different types of functions with clear examples. 
   </p>
 
-  <!-- CARDS PLACEHOLDER -->
+  <!-- Video Cards Grid -->
+  <!-- Videos are dynamically switched based on selected language via tranclate_bar.js -->
   <div class="cards">
+    <!-- Video 1 -->
     <div class="card video-card">
-      <iframe class="video-embed" src="https://www.youtube.com/embed/m1u8aY7zn2E?si=gSbHQL3UPeOW35QK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe class="video-embed" src="https://www.youtube.com/embed/lGfsp2CWjok" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
+    
+    <!-- Video 2 -->
     <div class="card video-card">
-      <iframe class="video-embed" src="https://www.youtube.com/embed/kOnJ5Ui2LsU?si=deYvevNEhmZAaxSs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe class="video-embed" src="https://www.youtube.com/embed/1xATmTI-YY8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
+    
+    <!-- Video 3 -->
     <div class="card video-card">
-      <iframe class="video-embed" src="https://www.youtube.com/embed/oQr7KgUe3T4?si=HJnBK6TZ-u3rAfxu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe class="video-embed" src="https://www.youtube.com/embed/Vw-RwPBWS8g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
   </div>
 </section>
 
-<footer style="margin-top: 80px;">
+<!-- Footer -->
+<footer style="margin-top: 80px;" data-i18n="footer_text">
   © 2026 Equation Hub · NorthShift & Wexiumx
 </footer>
+
+<!-- Scripts -->
+<!-- Translation system: handles multi-language support and video URL switching -->
+<script src="../js/translations.js"></script>
+<!-- Language dropdown: manages language switching and page translation -->
+<script src="../js/tranclate_bar.js"></script>
 
 </body>
 </html>
