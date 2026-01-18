@@ -86,7 +86,3 @@ in your browser.
 
 ---
 
-* Add **badges + status icons**
-* Help you describe the Ruby backend more clearly
-
-Just say the word 💪
