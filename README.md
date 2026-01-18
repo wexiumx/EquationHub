@@ -1,6 +1,3 @@
-Perfect, I understand 👍
-Here’s **Equation Hub’s README**, written in the **same clean style and structure** as your personal README. Minimal, modern, and GitHub-friendly.
-
 ---
 
 # 🧠 Equation Hub
@@ -89,23 +86,6 @@ in your browser.
 
 ---
 
-### 🔗 Future Plans
-
-* Improve UI/UX
-* Add more function types
-* Expand video content
-* Improve backend logic
-
----
-
-Always improving. Always learning. 🚀
-
----
-
-If you want next, I can:
-
-* Make an **even shorter version**
-* Add **screenshots section**
 * Add **badges + status icons**
 * Help you describe the Ruby backend more clearly
 
