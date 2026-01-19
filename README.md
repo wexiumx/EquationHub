@@ -82,7 +82,7 @@ in your browser.
 ### 👥 Team
 
 * **NorthShift** — HTML, CSS, JavaScript, Backend (Ruby)
-* **wexiumx** — HTML, CSS
+* **wexiumx** — HTML, CSS, JavaScript
 
 ---
 
