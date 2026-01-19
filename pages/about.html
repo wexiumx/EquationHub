@@ -22,14 +22,13 @@
 <!-- Header / Navigation -->
 <header>
   <nav>
-    <!-- Logo -->
     <div class="logo">
-      <img src="../images/logo.png" alt="Equation Hub Logo" />
+      <a href="../index.html" aria-label="Home">
+        <img src="../images/logo.png" alt="Equation Hub Logo" />
+      </a>
     </div>
 
-    <!-- Navigation Links & Language Selector -->
     <div class="nav-links-wrapper">
-      <!-- Main Navigation Links -->
       <div class="nav-links">
         <a href="../index.html" data-i18n="nav_home">Home</a>
         <a href="functions.html" data-i18n="nav_functions">Functions</a>
@@ -38,15 +37,14 @@
         <a href="support.html" class="support" data-i18n="nav_support">👑 Support</a>
       </div>
 
-      <!-- Language Dropdown Selector -->
       <div class="lang-dropdown">
         <button class="lang-btn" aria-label="Language">
-          <img src="../images/uk.png">
+          <img src="../images/uk.png" alt="English">
           <span class="lang-label">English</span>
           <span class="caret">▾</span>
         </button>
 
-        <div class="lang-menu">
+        <div class="lang-menu" hidden>
           <button data-lang="en"><img src="../images/uk.png"> English</button>
           <button data-lang="lt"><img src="../images/lt.png"> Lietuvių</button>
           <button data-lang="ru"><img src="../images/ru.png"> Русский</button>
