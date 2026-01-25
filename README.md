@@ -61,12 +61,6 @@ Changing the language also changes the **video content** to match.
 
 ---
 
-### 🚧 Project Status
-
-🛠 **Still in progress**, but close to completion.
-
----
-
 ### ▶️ How to Run
 
 Open the project locally by opening:
