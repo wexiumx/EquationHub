@@ -128,7 +128,6 @@ nav {
     cursor: pointer;
     color: var(--support);
     width: 130px;
-    transition: background 0.2s ease;
 }
 .lang-btn:hover {
     background: rgba(255, 255, 255, 0.12);

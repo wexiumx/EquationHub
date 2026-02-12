@@ -30,3 +30,30 @@
 	transform: scale(1.8);
 	transform-origin: center;
 }
+
+.btnSupport {
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-size: 14px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(8px);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.3s ease;
+    width: 150px;
+}
+.btnSupport:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.7);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+.btnSupport.primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(255, 255, 255, 0.1);
+}
+
