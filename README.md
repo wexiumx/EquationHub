@@ -6,6 +6,17 @@ Interactive math platform | Educational tool | Visualization-focused website
 
 ---
 
+### 🖼️ Check out how our site looks!
+<details>
+<summary>Gallery (3 images)</summary>
+
+![Screenshot 1](screenshots/home.png)
+![Screenshot 2](screenshots/support.png)
+![Screenshot 3](screenshots/videos.png)
+
+</details>
+
+---
 ### 💻 Tech & Tools
 
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge\&logo=html5\&logoColor=white)
