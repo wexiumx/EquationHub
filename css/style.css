@@ -127,7 +127,7 @@ nav {
     font-weight: 600;
     cursor: pointer;
     color: var(--support);
-    min-width: 130px;
+    width: 130px;
     transition: background 0.2s ease;
 }
 .lang-btn:hover {

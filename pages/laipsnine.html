@@ -23,7 +23,7 @@
   <nav>
     <!-- Logo -->
     <div class="logo">
-      <a href="../index.html">
+      <a href="../index.html" aria-label="Home">
         <img src="../images/logo.png" alt="Equation Hub Logo" />
       </a>
     </div>
@@ -32,8 +32,31 @@
     <div class="nav-links-wrapper">
       <!-- Main Navigation Links -->
       <div class="nav-links">
-        <a href="../index.html" data-i18n="nav_home">Pagrindinis</a>
-        <a href="laipsnine.html" class="active" data-i18n="nav_functions">Funkcijos</a>
+        <a href="../index.html" class="active" data-i18n="nav_home">Home</a>
+        <a href="tiesine.html" data-i18n="nav_functions">Functions</a>
+        <a href="videos.html" data-i18n="nav_videos">Videos</a>
+        <a href="about.html" data-i18n="nav_about">About Us</a>
+        <a href="support.html" class="support" data-i18n="nav_support">👑 Support</a>
+      </div>
+
+      <!-- Language Dropdown Selector -->
+      <div class="lang-dropdown">
+        <button class="lang-btn" aria-label="Language">
+          <img src="../images/uk.png" alt="English">
+          <span class="lang-label">English</span>
+          <span class="caret">▾</span>
+        </button>
+        <div class="lang-menu" hidden>
+          <button data-lang="en">
+            <img src="../images/uk.png" alt=""> English
+          </button>
+          <button data-lang="lt">
+            <img src="../images/lt.png" alt=""> Lietuvių
+          </button>
+          <button data-lang="ru">
+            <img src="../images/ru.png" alt=""> Русский
+          </button>
+        </div>
       </div>
     </div>
   </nav>
@@ -105,6 +128,19 @@
 <footer style="margin-top: 80px;" data-i18n="footer_text">
   © 2026 Equation Hub · Emil & Lukas
 </footer>
+
+<!-- Scripts -->
+<!-- Translation system: handles multi-language support and video URL switching -->
+<script src="../js/translations.js"></script>
+<!-- Language dropdown: manages language switching and page translation -->
+<script src="../js/tranclate_bar.js"></script>
+
+<script>
+const currentLang = localStorage.getItem("lang") || "en";
+fetch(`http://localhost:4567/track?event=page_view&page=videos&lang=${currentLang}`);
+</script>
+
+
 
 </body>
 </html>
