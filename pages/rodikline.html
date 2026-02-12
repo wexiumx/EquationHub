@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Page Metadata -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Functions — Equation Hub</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/rodikline.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="functions-page">
+
+<!-- Background Video -->
+<video autoplay muted loop playsinline id="bg-video">
+  <source src="../Videos/background.mp4" type="video/mp4">
+</video>
+
+<!-- Header / Navigation -->
+<header>
+  <nav>
+    <!-- Logo -->
+    <div class="logo">
+      <a href="../index.html">
+        <img src="../images/logo.png" alt="Equation Hub Logo" />
+      </a>
+    </div>
+
+    <!-- Navigation Links & Language Selector -->
+    <div class="nav-links-wrapper">
+      <!-- Main Navigation Links -->
+      <div class="nav-links">
+        <a href="../index.html" data-i18n="nav_home">Pagrindinis</a>
+        <a href="rodikline.html" class="active" data-i18n="nav_functions">Funkcijos</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<section class="features-section">
+  <!-- bigbox -->
+  <div class="container">
+    <!-- leftside of graph -->
+    <div class="leftside">
+      <!-- buttons -->
+      <div class="buttons-card card">
+        <a href="tiesine.html"><button>Tiesinė funkcija</button></a>
+        <a href="laipsnine.html"><button>Laipsninė funkcija</button></a>
+        <a href="saknies.html"><button>Šaknies funkcija</button></a>
+        <a href="rodikline.html"><button>Rodiklinė funkcija</button></a>
+        <a href="logaritmine.html"><button>Logaritminė funkcija</button></a>
+        <a href="trigonometrine.html"><button>Trigonometrinė funkcija</button></a>
+      </div>
+      <!-- formula -->
+      <div class="formula-card card">
+        <h3>Funkcijos formulė</h3>
+        <p>f(x) = a • e<sup>x</sup></p>
+      </div>
+      <!-- properties -->
+
+    </div>
+    <!-- graph -->
+    <div class="graph-card card">
+      <img src="../images/rodikline.webp" alt="rodikline">
+    </div>
+  </div>
+
+<div class="properties-card card">
+    <h3>Funkcijos savybės</h3>
+
+    <h4>Apibrėžimas</h4>
+    <div class="ftextbox">
+      <p>Rodiklinė (eksponentinė) funkcija – tai tokia funkcija, kurią galima užrašyti formule:</p>
+      <div class="spans">
+        <span>f(x) = a^x</span>
+      </div>
+      <p>
+        Kur: <br>
+        <ul>
+          <li>x – nepriklausomas kintamasis (argumentas);</li>
+          <li>f(x) arba y – priklausomas kintamasis (funkcijos reikšmė);</li>
+          <li>a – funkcijos pagrindas, kuris turi būti teigiamas (a > 0) ir nelygus vienetui (a ≠ 1). <br>
+        </ul>
+        <br><br><br>
+      </p>
+    </div>
+
+    <h4>Grafikas</h4>
+    <div class="stextbox">
+      <p>
+        <ul><br>
+          <li>Jei a > 1, funkcija didėja (grafikas kyla). <br></li>
+          <li>Jei 0 < a < 1, funkcija mažėja (grafikas leidžiasi). <br></li>
+          <li>Grafikas visada yra virš x ašies (f(x) > 0). <br></li>
+          <li>Funkcija turi horizontaliąją asimptotę ties y = 0. <br>   </li>
+        </ul><br>
+      </p>
+    </div>
+
+    <h5>Grafiko pavyzdžiai</h5>
+    <div class="ttextbox">
+      <ol><br>
+        <li>1. y = 2^x – didėjanti funkcija. <br></li>
+        <li>2. y = 0.5^x – mažėjanti funkcija. <br></li>
+        <li>3. y = 3^x – sparčiai didėjanti funkcija. <br></li>
+      </ol> <br><br><br><br><br><br>
+    </div>
+    <div class="links">
+      <a href="https://www.geogebra.org/">GeoGebra</a>
+    </div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer style="margin-top: 80px;" data-i18n="footer_text">
+  © 2026 Equation Hub · Emil & Lukas
+</footer>
+
+</body>
+</html>
